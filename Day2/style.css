@@ -177,6 +177,11 @@ body {
     .text-box {
         padding: 8px 5px;
     }
+
+    .card img{
+        width: 100%;
+        object-fit: contain;
+    }
 }
 
 /* Small Mobile: Below 480px (1 column - IMAGE ON TOP, TEXT BELOW) */
@@ -193,9 +198,9 @@ body {
         height: auto;
     }
 
-    .card img {
+    .card img{
         width: 100%;
-        aspect-ratio: 1;
+        object-fit: contain;
     }
 
     .text-box {
