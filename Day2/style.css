@@ -1,0 +1,217 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+#root {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 100%;
+    gap: 15px;
+    background-color: whitesmoke;
+    margin-top: 1%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.card {
+    border: 2px solid rgb(130, 130, 246);
+    padding: 0;
+    width: 90%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;  
+    justify-content: flex-start;
+    position: relative;
+    cursor: pointer;
+    background-color: rgb(130, 130, 246);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(130, 130, 246, 0.3);
+    transform: translateY(-4px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.text-box {
+    padding: 12px 8px;
+    position: static;
+    height: auto;
+    width: 100%;
+}
+
+#Ethnic {
+    font-size: 30px;
+    font-weight: bolder;
+    color: rgb(35, 34, 34);
+    margin-bottom: 5px;
+}
+
+#off-text {
+    font-size: 50px;
+    font-weight: lighter;
+    color: black;
+    margin-bottom: 5px;
+}
+
+#Btn-text {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+/* ========== RESPONSIVE ========== */
+
+/* Desktop: 1200px+ (6 columns) */
+@media (max-width: 1400px) {
+    #root {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+/* Desktop: 1024px - 1199px (5 columns) */
+@media (max-width: 1199px) {
+    #root {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 12px;
+        padding: 12px;
+    }
+
+    #Ethnic {
+        font-size: 24px;
+    }
+
+    #off-text {
+        font-size: 40px;
+    }
+
+    #Btn-text {
+        font-size: 16px;
+    }
+}
+
+/* Tablet: 768px - 1023px (4 columns) */
+@media (max-width: 1023px) {
+    #root {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        padding: 12px;
+    }
+
+    #Ethnic {
+        font-size: 20px;
+    }
+
+    #off-text {
+        font-size: 35px;
+    }
+
+    #Btn-text {
+        font-size: 14px;
+    }
+}
+
+/* Tablet Small: 600px - 767px (3 columns) */
+@media (max-width: 767px) {
+    #root {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+
+    #Ethnic {
+        font-size: 16px;
+    }
+
+    #off-text {
+        font-size: 28px;
+    }
+
+    #Btn-text {
+        font-size: 12px;
+    }
+
+    .text-box {
+        padding: 10px 6px;
+    }
+}
+
+/* Mobile: 480px - 599px (2 columns) */
+@media (max-width: 599px) {
+    #root {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 8px;
+        margin-top: 2%;
+    }
+
+    #Ethnic {
+        font-size: 14px;
+    }
+
+    #off-text {
+        font-size: 24px;
+    }
+
+    #Btn-text {
+        font-size: 10px;
+    }
+
+    .text-box {
+        padding: 8px 5px;
+    }
+}
+
+/* Small Mobile: Below 480px (1 column - IMAGE ON TOP, TEXT BELOW) */
+@media (max-width: 479px) {
+    #root {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        padding: 6px;
+    }
+
+    .card {
+        width: 100%;
+        flex-direction: column;  /* ← ALWAYS column, never row */
+        height: auto;
+    }
+
+    .card img {
+        width: 100%;
+        aspect-ratio: 1;
+    }
+
+    .text-box {
+        width: 100%;  /* ← FULL width, not 60% */
+        padding: 10px;
+    }
+
+    #Ethnic {
+        font-size: 12px;
+    }
+
+    #off-text {
+        font-size: 16px;
+    }
+
+    #Btn-text {
+        font-size: 9px;
+    }
+}
