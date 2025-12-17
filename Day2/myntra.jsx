@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+
 function Card(val) {
     return (
         <div className="card">
@@ -9,6 +10,44 @@ function Card(val) {
                 <p id="Ethnic">{val.cloth}</p>
                 <p id="off-text">{val.offer}</p>
                 <p id="Btn-text">Shop Now</p>
+            </div>
+        </div>
+    )
+}
+
+
+function Header() {
+    return (
+        <div className="nav">
+            <div className="logo">
+                <img src="https://logos-world.net/wp-content/uploads/2021/02/New-Myntra-Logo.png" alt="logo"></img>
+            </div>
+
+            <div className="links">
+                <a href="./myntra.html">Men</a>
+                <a href="./myntra.html">Women</a>
+                <a href="./myntra.html">Kids</a>
+                <a href="./myntra.html">Home</a>
+                <a href="./myntra.html">Beauty</a>
+                <a href="./myntra.html">Genz</a>
+            </div>
+
+            <div className="search-bar">
+                <input type="text" placeholder="Search For Products,brands and more"></input>
+            </div>
+
+            <div className="poster-link">
+                <div className="link1">
+                    <a href="myntra.html">Profile</a>
+                </div>
+
+                 <div className="link1">
+                    <a href="myntra.html">Wishlist</a>
+                </div>
+
+                 <div className="link1">
+                    <a href="myntra.html">Bag</a>
+                </div>
             </div>
         </div>
     )
@@ -27,18 +66,29 @@ const arr = [{ cloth: "Ethnic Wear", offer: "20-30% off", image: "https://encryp
 
 function App() {
     return (
-        //header
-        //body
-
         <>
-        {
-            arr.map((val,index)=><Card  key={index} image={val.image} offer={val.offer} cloth={val.cloth} />)
-        }
-        </>
+            {/* Header */}
+            <Header />
 
-        //footer
-    )
+            {/* Body */}
+            <div id="Root-card">
+                {
+                    arr.map((val, index) => (
+                        <Card
+                            key={index}
+                            image={val.image}
+                            offer={val.offer}
+                            cloth={val.cloth}
+                        />
+                    ))
+                }
+            </div>
+
+            {/* Footer */}
+        </>
+    );
 }
+
 
 
 const main = document.getElementById('root');
