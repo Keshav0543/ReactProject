@@ -10,7 +10,78 @@ body {
     overflow-x: hidden;
 }
 
-#root {
+#root{
+    width: 100vw;
+    height: 100vh;
+}
+
+.nav {
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    flex-wrap: wrap; /* allows wrapping when needed */
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.links {
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.links a {
+    color: black;
+}
+
+.search-bar {
+    margin-left: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    border-radius: 10px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.poster-link {
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.link1 a {
+    color: black;
+}
+
+#Root-card {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     width: 100%;
@@ -81,14 +152,23 @@ body {
 
 /* Desktop: 1200px+ (6 columns) */
 @media (max-width: 1400px) {
-    #root {
+    body{
+        overflow-x: hidden;
+    }
+
+    #Root-card {
         grid-template-columns: repeat(6, 1fr);
     }
 }
 
 /* Desktop: 1024px - 1199px (5 columns) */
 @media (max-width: 1199px) {
-    #root {
+    body{
+        overflow-x: hidden;
+    }
+    
+    #Root-card
+    {
         grid-template-columns: repeat(5, 1fr);
         gap: 12px;
         padding: 12px;
@@ -109,7 +189,10 @@ body {
 
 /* Tablet: 768px - 1023px (4 columns) */
 @media (max-width: 1023px) {
-    #root {
+    body{
+        overflow-x: hidden;
+    }
+    #Root-card {
         grid-template-columns: repeat(4, 1fr);
         gap: 12px;
         padding: 12px;
@@ -130,7 +213,10 @@ body {
 
 /* Tablet Small: 600px - 767px (3 columns) */
 @media (max-width: 767px) {
-    #root {
+    body{
+        overflow-x: hidden;
+    }
+    #Root-card {
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
         padding: 10px;
@@ -155,7 +241,10 @@ body {
 
 /* Mobile: 480px - 599px (2 columns) */
 @media (max-width: 599px) {
-    #root {
+    body{
+        overflow-x: hidden;
+    }
+    #Root-card {
         grid-template-columns: repeat(2, 1fr);
         gap: 8px;
         padding: 8px;
@@ -186,7 +275,10 @@ body {
 
 /* Small Mobile: Below 480px (1 column - IMAGE ON TOP, TEXT BELOW) */
 @media (max-width: 479px) {
-    #root {
+    body{
+        overflow-x: hidden;
+    }
+    #Root-card {
         grid-template-columns: 1fr;
         gap: 6px;
         padding: 6px;
@@ -218,5 +310,79 @@ body {
 
     #Btn-text {
         font-size: 9px;
+    }
+}
+
+
+
+/* tablet: stack some items, shrink margins */
+@media (max-width: 992px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav {
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .links {
+        margin-left: 2%;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .search-bar {
+        margin-left: 0;
+        width: 50%;
+        order: 3; /* move search below logo/links if needed */
+        margin-top: 0.5rem;
+    }
+
+    .poster-link {
+        margin-left: 0;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
+
+/* mobile: vertical layout, full‑width search */
+@media (max-width: 600px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .links {
+        margin-left: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .poster-link {
+        margin-left: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        width: 100%;
+        margin-top: 0.5rem;
     }
 }
