@@ -41,13 +41,43 @@ function Header() {
                     <a href="myntra.html">Profile</a>
                 </div>
 
-                 <div className="link1">
+                <div className="link1">
                     <a href="myntra.html">Wishlist</a>
                 </div>
 
-                 <div className="link1">
+                <div className="link1">
                     <a href="myntra.html">Bag</a>
                 </div>
+            </div>
+        </div>
+    )
+}
+
+
+function Footer(){
+    return (
+        <div className="footer-content">
+        <div className="info">
+            <span>
+                <p className="first">Popular searches</p>
+                Makeup  Dresses For Girls  T-Shirts  Sandals  Headphones  Babydolls  Blazers For Men  Handbags  Ladies Watches  Bags  Sport Shoes  Reebok Shoes  Puma Shoes  Boxers  Wallets  Tops  Earrings  Fastrack Watches  Kurtis  Nike  Smart Watches  Titan Watches  Designer Blouse  Gowns  Rings  Cricket Shoes  Forever 21  Eye Makeup  Photo Frames  Punjabi Suits  Bikini  Myntra Fashion Show  Lipstick  Saree  Watches  Dresses  Lehenga  Nike Shoes  Goggles  Bras  Suit  Chinos  Shoes  Adidas Shoes  Woodland Shoes  Jewellery  Designers Sarees
+            </span>
+
+            <p className="first">ONLINE SHOPPING MADE EASY AT MYNTRA</p>
+            <span>If you would like to experience the best of online shopping for men, women and kids in India, you are at the right place. Myntra is the ultimate destination for fashion and lifestyle, being host to a wide array of merchandise including clothing, footwear, accessories, jewellery, personal care products and more. It is time to redefine your style statement with our treasure-trove of trendy items. Our online store brings you the latest in designer products straight out of fashion houses. You can shop online at Myntra from the comfort of your home and get your favourites delivered right to your doorstep.
+
+</span>
+        </div>
+    </div>
+    )
+}
+
+
+function Banner() {
+    return (
+        <div className="nav2">
+            <div className="banner-img">
+                <img src="https://blog.myntra.com/wp-content/uploads/2024/05/Myntra_End_Of_Reason_Sale_1.35_million_new_customers_likely_to_shop_from_30_lakh_styles.jpg" alt="banner"></img>
             </div>
         </div>
     )
@@ -69,6 +99,7 @@ function App() {
         <>
             {/* Header */}
             <Header />
+            <Banner />
 
             {/* Body */}
             <div id="Root-card">
@@ -85,6 +116,8 @@ function App() {
             </div>
 
             {/* Footer */}
+
+            <Footer/>
         </>
     );
 }
