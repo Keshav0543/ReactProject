@@ -154,6 +154,13 @@ body {
     font-weight: bold;
 }
 
+#filter-btn{
+   border: none;
+   font-size: 15px;
+   cursor: pointer;
+   margin-left: 10px;
+}
+
 /* ================= GRID RESPONSIVE ================= */
 
 @media (max-width: 1400px) {
