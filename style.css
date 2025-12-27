@@ -1,0 +1,136 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ================= NAV ================= */
+.nav-container{
+    width: 100%;
+    height: 300px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* ================= WRAP ================= */
+.wrap{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    background-color: whitesmoke;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+/* ================= CARD ================= */
+.card-container{
+    padding: 10px;
+    width: 20%;
+    height: auto;
+    border: 2px solid black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    /* safety */
+    max-width: 100%;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+/* ================= IMAGE ================= */
+.image-place{
+    width: 100%;
+}
+
+.image-place img{
+    width: 70%;
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ================= NAME ================= */
+.name-info{
+    width: 100%;
+}
+
+.name-info h1{
+    color: black;
+    text-align: center;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    font-size: clamp(20px, 3vw, 32px);
+}
+
+/* ================= LINK ================= */
+.profile-link{
+    width: 100%;
+    height: auto;
+}
+
+.profile-link a{
+    font-size: 20px;
+    word-break: break-word;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .card-container{
+        width: 25%;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+}
+
+/* Small Tablet / Large Mobile */
+@media (max-width: 768px) {
+    .card-container{
+        width: 50%;
+    }
+
+    .image-place img{
+        width: 60%;
+    }
+
+    h1{
+        font-size: 32px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .card-container{
+        width: 100%;
+    }
+
+    .image-place img{
+        width: 50%;
+    }
+
+    h1{
+        font-size: 26px;
+    }
+
+    .profile-link a{
+        font-size: 18px;
+    }
+}
