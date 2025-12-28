@@ -17,13 +17,32 @@ async function getinfo(setdata, val) {
     
 }
 
+async function getuserP(setdata,name){
+    try{
+    const res=await fetch(`https://api.github.com/users/${name}`);
+
+    if(!res.ok) throw new Error(`HTTP:Error Staus:${res.status}`);
+
+    const data=await res.json();
+    setdata([data]);
+    }catch(err){
+        alert(err.message);
+    }
+}
+
 function Card() {
     const [data, setdata] = useState([]);
     const [val, setval] = useState("");
-
     useEffect(() => {
         getinfo(setdata, 10);
     }, []);
+
+ 
+    function Checkvalid(){
+        const trimV=val.trim();
+        if(!isNaN(trimV))getinfo(setdata,Number(val));
+        else getuserP(setdata,val);
+    }
 
     useEffect(()=>{
         setval("");
@@ -34,8 +53,8 @@ function Card() {
 
         <>
             <div className="search-bar">
-                <input type="text" placeholder="Enter Ur Number" value={val} onChange={(e)=>setval(e.target.value)}></input>
-                <button onClick={()=>getinfo(setdata,Number(val))}>Search Profiles</button>
+                <input type="text" placeholder="Enter To Search" value={val} onChange={(e)=>setval(e.target.value)}></input>
+                <button onClick={()=>Checkvalid()}>Search Profiles</button>
             </div>
 
             <div className="wrap">
